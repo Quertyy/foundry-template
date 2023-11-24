@@ -1,0 +1,18 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+solc = '0.8.23'
+cache = true
+force = true
+optimizer = true
+optimizer_runs = 200
+evm_version = 'paris'
+
+[profile.ci]
+verbosity = 4
+
+[rpc_endpoints]
+goerli = "https://eth-goerli.g.alchemy.com/v2/${GOERLI_API_KEY}"
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config

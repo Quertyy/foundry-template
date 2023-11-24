@@ -1,0 +1,31 @@
+{
+  "name": "@quertyy/foundry-template",
+  "description": "Foundry-based template for developing Solidity smart contracts",
+  "version": "1.0.0",
+  "author": {
+    "name": "Querty",
+    "url": "https://github.com/Quertyy"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.7",
+    "solhint-community": "^3.5.0"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "forge",
+    "foundry",
+    "smart-contracts",
+    "solidity",
+    "template"
+  ],
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf cache out",
+    "lint": "npm lint:sol && npm prettier:check",
+    "lint:sol": "forge fmt --check && npm solhint \"{script,src,test}/**/*.sol\"",
+    "test:coverage": "sh ./coverage.sh",
+    "prettier:check": "prettier --check \"**/*.{json,md,yml}\"",
+    "prettier:write": "prettier --write \"**/*.{json,md,yml}\""
+  }
+}
